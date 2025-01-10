@@ -3,147 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-commerce Website</title>
+  <title>E-commerce Login</title>
   <style>
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
+    /* General Reset */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    .container {
-      width: 90%;
-      margin: 20px auto;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .form-container {
-      background: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      margin: auto;
-    }
-    input[type="text"], input[type="email"], input[type="password"], button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #333;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #555;
-    }
-    .product-grid {
+
+    body {
+      font-family: 'Arial', sans-serif;
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #8e44ad, #3498db);
+      color: white;
     }
-    .product-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      width: 200px;
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      width: 350px;
       text-align: center;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .product-card img {
-      max-width: 100%;
-      height: auto;
+
+    .container h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f39c12;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
       border-radius: 5px;
     }
-    .product-card button {
-      margin-top: 10px;
+
+    .btn {
+      display: inline-block;
+      background: #f39c12;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #d35400;
+      transform: translateY(-2px);
+    }
+
+    .register-link {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .register-link:hover {
+      color: #ecf0f1;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>My E-commerce Website</h1>
-  </header>
-
-  <!-- Registration Page -->
   <div class="container">
-    <h2>Registration</h2>
-    <div class="form-container">
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Login Page -->
-  <div class="container">
-    <h2>Login</h2>
-    <div class="form-container">
-      <form>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Product Display -->
-  <div class="container">
-    <h2>Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200" alt="Product 1">
-        <h3>Product 1</h3>
-        <p>$10.00</p>
-        <button>Add to Cart</button>
+    <h1>Welcome Back!</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
       </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200" alt="Product 2">
-        <h3>Product 2</h3>
-        <p>$20.00</p>
-        <button>Add to Cart</button>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
       </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200" alt="Product 3">
-        <h3>Product 3</h3>
-        <p>$30.00</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
+      <a href="b.html" class="btn">Login</a>
+    </form>
+    <a href="#" class="register-link">Don't have an account? Sign up</a>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 E-commerce Website</p>
-  </footer>
-
 </body>
 </html>
